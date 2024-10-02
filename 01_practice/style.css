@@ -1,4 +1,168 @@
 @charset "utf-8";
 
+/* 共通 */
+body {
+    min-width: 300px;
+    color: #1e1e1e;
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.05em;
+}
 
-@media (min-width:740px) {}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.inner {
+    width: 86.5%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ヘッダー */
+header h1 {
+    margin: 40px 0;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+/* トップ */
+.top .inner {
+    margin-bottom: 100px;
+    background: url(./images/bg_main.png) no-repeat center center/cover;
+    padding: 240px 0 80px;
+}
+
+.top .text {
+    width: 343px;
+    padding: 40px;
+    background: #fff;
+}
+
+.top h2 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.67;
+}
+
+.top p {
+    font-size: 36px;
+    line-height: 1.39;
+}
+
+/* ディスカッション */
+.discussion h2 {
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+}
+
+.discussion h2::before {
+    content: "KUMONが向き合うもの";
+    display: block;
+    width: 194px;
+    margin: 0 auto 25px;
+    padding: 8px;
+    background: #72C9F3;
+    color: #fff;
+    font-size: 14px;
+}
+
+.discussion h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    margin: 20px auto 50px;
+    border-bottom: #1e1e1e 1px solid;
+}
+
+.discussion .image {
+    position: relative;
+}
+
+.discussion h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 93%;
+    padding: 20px;
+    background: rgba(0, 0, 0, .8);
+    color: #FFF;
+    line-height: 1;
+}
+
+/* https: //qiita.com/ushi_osushi/items/d9f0c8990b2e807969d2 */
+/* positionの中央揃え */
+
+.discussion ul {
+    margin-top: 20px;
+}
+
+.discussion li {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px 14px;
+    background-color: #F5F5F5;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.discussion article {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: #ddd 1px solid;
+}
+
+.discussion article:last-child {
+    border-bottom: none;
+}
+
+/* フッター */
+footer {
+    background: #1E1E1E;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+dl {
+    margin-bottom: 100px;
+}
+
+small {
+    font-size: 12px;
+}
+
+
+@media (min-width:640px) {
+    .top .inner {
+        margin-bottom: 0;
+        background: none;
+        padding: 0;
+    }
+
+    .top {
+        margin-bottom: 100px;
+        background: url(./images/bg_main.png) no-repeat center center/cover;
+        padding: 240px 0 80px;
+    }
+
+    .contents {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .discussion article {
+        width: 46.9%;
+        border-bottom: none;
+    }
+}
