@@ -134,7 +134,8 @@ footer {
 }
 
 dl {
-    margin-bottom: 100px;
+    margin: 0 auto 100px;
+    width: 370px;
 }
 
 small {
