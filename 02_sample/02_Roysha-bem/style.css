@@ -267,3 +267,102 @@ img {
 
 
 /* ------------help--------------- */
+.fees {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.fees__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fees .unit {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fees__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fees__item {
+    width: 30%;
+}
+
+.question {
+    background: #123D88;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.question .unit__title {
+    color: #fff;
+}
+
+.question__info {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question__info .btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asked {
+    margin: 80px 0;
+}
+
+.asked__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.asked__info {
+    width: 46%;
+}
+
+.asked__list {
+    width: 46%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: -45px;
+}
+
+.asked__item {
+    width: 46%;
+    padding: 40px;
+    border: #6C6C6F 1px solid;
+}
+
+.asked__list .card {
+    margin-bottom: 45px;
+}
+
+.card__title:last-child {
+    margin-bottom: 0;
+}
