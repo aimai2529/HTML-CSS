@@ -59,6 +59,9 @@ img {
   font-weight: bold;
   line-height: 1.2777777778;
 }
+.card__title:last-child {
+  margin-bottom: 0;
+}
 
 .btn {
   display: block;
@@ -72,6 +75,9 @@ img {
   line-height: 1.6666666667;
   text-align: center;
   text-transform: uppercase;
+}
+.btn--mainColor {
+  background-color: #202124;
 }
 
 .footer {
@@ -148,5 +154,48 @@ img {
 }
 .trending__items {
   width: 47.5%;
+}
+
+.post {
+  margin-bottom: 60px;
+}
+.post__inner {
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post__items {
+  margin-bottom: 40px;
+}
+
+.discovery {
+  padding: 60px 0;
+  background-color: #F6F6F6;
+}
+.discovery__inner {
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.discovery__title {
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border-left: #FA6980 solid 10px;
+  color: #202124;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.discovery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.discovery__items {
+  width: 30%;
 }
 /*# sourceMappingURL=style.css.map */
