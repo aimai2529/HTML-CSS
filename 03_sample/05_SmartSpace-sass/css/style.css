@@ -1,0 +1,193 @@
+body {
+  color: #31353B;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.7333333333;
+  letter-spacing: 0.02em;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  margin: 50px 0 80px;
+}
+.header__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__siteName {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu__item {
+  margin-left: 30px;
+  font-weight: bold;
+}
+.menu__item--current {
+  color: #F90;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #F90;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+}
+
+.unit__title {
+  margin-bottom: 20px;
+  color: #F90;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6666666667;
+  letter-spacing: 0;
+}
+.unit__summary {
+  margin-bottom: 40px;
+  color: #000;
+  font-size: 48px;
+  line-height: 1.2083333333;
+}
+.unit__content {
+  margin-bottom: 60px;
+}
+.unit__content:last-child {
+  margin-bottom: 0;
+}
+.unit .btn {
+  width: 200px;
+  background-color: #F85A47;
+}
+
+.about {
+  margin-bottom: 120px;
+}
+.about__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__inner--reverse {
+  flex-direction: row-reverse;
+}
+.about__text {
+  width: 44%;
+}
+.about__img {
+  width: 50%;
+}
+
+.card {
+  padding: 45px 40px;
+  border: solid #A3A3A3 1px;
+  border-radius: 10px;
+}
+.card__content {
+  margin-bottom: 80px;
+}
+.card__reviewer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1;
+}
+.card__facePhoto {
+  margin-right: 20px;
+  width: 48px;
+}
+.card__name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #DBFFFF;
+  padding: 100px 0;
+  text-align: right;
+}
+.footer__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__copy {
+  display: block;
+  margin-top: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.reviews {
+  margin-bottom: 120px;
+}
+.reviews__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reviews__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews__item {
+  width: 47%;
+}
+
+.deals {
+  margin-bottom: 120px;
+}
+.deals__inner {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.deals__text {
+  margin-bottom: 60px;
+}
+.deals__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.deals__item {
+  width: 30%;
+}
+.deals__item .btn {
+  margin-top: 30px;
+}
+/*# sourceMappingURL=style.css.map */
