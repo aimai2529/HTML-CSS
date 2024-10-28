@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* ブレイクポイントの設定 */
+/* minixの設定 */
+body {
+  color: #404040;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.mainVisual {
+  background: url(../images/pic_main.png) no-repeat center center/cover;
+  padding: 400px 0 100px;
+  color: #fff;
+  text-align: right;
+}
+.mainVisual__inner {
+  max-width: 700px;
+  width: 87.5%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.mainVisual__title {
+  margin-bottom: 20px;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.1904761905;
+}
+@media screen and (min-width: 800px) {
+  .mainVisual__title {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+}
+.mainVisual__lead {
+  font-size: 18px;
+  line-height: 1.2222222222;
+}
+/*# sourceMappingURL=style.css.map */
