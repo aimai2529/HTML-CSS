@@ -1,0 +1,345 @@
+@charset 'utf-8';
+
+$color-text: #404040;
+$color-main: #985E5B;
+$color-bg: #EDEFF2;
+
+@mixin mix-inner() {
+    max-width: 1200px;
+    width: (560/640)*100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin m-flex($a: stretch, $j: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+
+/* ブレイクポイントの設定 */
+$breakpoints: (
+    "tablet": "screen and (min-width: 640px)",
+    "desktop": "screen and (min-width: 800px)",
+    "full": "screen and (min-width: 1200px)",
+    ) !default;
+
+/* minixの設定 */
+@mixin m-query($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin m-main-title {
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: #ddd 1px solid;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+// ==========common==========
+
+body {
+    color: $color-text;
+    font-size: 14px;
+    font-family: Helvetica,
+        Arial,
+        sans-serif;
+    line-height: (21/14
+    );
+letter-spacing: (100em/1000);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.header {
+    margin: 40px 0;
+
+    &__inner {
+        @include mix-inner();
+        @include m-flex(center);
+    }
+}
+
+.nav {
+    &__list {
+        @include m-flex();
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        margin-left: 20px;
+
+        &--current {
+            color: $color-main ;
+        }
+    }
+}
+
+.card {
+    position: relative;
+
+    &__image {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: 26px;
+        left: 30px;
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+        background-color: $color-main;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.btn {
+    display: block;
+    width: 300px;
+
+    @include m-query(tablet) {
+        width: 100%;
+    }
+
+    margin-left: auto;
+    padding: 18px;
+    background-color: $color-main;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: $color-bg ;
+    text-align: center;
+
+    &__inner {
+        @include mix-inner();
+
+        @include m-query(desktop) {
+            @include m-flex(center);
+        }
+    }
+
+    &__logo {
+        margin-bottom: 25px;
+    }
+
+    &__copy {
+        font-size: 12px;
+        line-height: (18/12);
+        text-transform: uppercase;
+    }
+}
+
+// .mobile {
+//     @include m-query(desktop) {
+//         display: none;
+//     }
+// }
+
+
+// ===========index=========
+
+.mainVisual {
+    margin-bottom: 100px;
+    background: url(../images/pic_main.png) no-repeat center center/cover;
+    padding: 400px 0 100px;
+    color: #fff;
+    text-align: right;
+
+    &__inner {
+        @include mix-inner();
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 42px;
+        font-weight: bold;
+        line-height: (50/42);
+
+        @include m-query(desktop) {
+            font-size: 50px;
+            line-height: (60/50);
+        }
+    }
+
+    &__lead {
+        font-size: 18px;
+        line-height: (22/18);
+    }
+}
+
+.contents {
+    &__inner {
+        @include mix-inner();
+
+        @include m-query(desktop) {
+            @include m-flex(flex-start);
+        }
+    }
+}
+
+.service {
+    @include m-query(desktop) {
+        width: (700/1200)*100%;
+    }
+
+    margin-bottom: 100px;
+
+    &__title {
+        @include m-main-title();
+    }
+
+    &__list {
+        @include m-query(tablet) {
+            @include m-flex();
+            margin-bottom: -80px;
+        }
+    }
+
+    &__item {
+        @include m-query(tablet) {
+            width: (330/700)*100%;
+        }
+
+        @include m-flex(flex-start, flex-start);
+        flex-direction: column;
+        margin-bottom: 80px;
+
+        .btn {
+            margin-top: auto;
+        }
+    }
+}
+
+.information {
+    @include m-query(desktop) {
+        width: (400/1200)*100%;
+    }
+
+    margin-bottom: 100px;
+
+    &__title {
+        @include m-main-title();
+    }
+
+    &__column {
+        @include m-flex(center, flex-start);
+        margin-bottom: 15px;
+    }
+
+    &__caption {
+        width: 92px;
+        margin-right: 30px;
+        padding: 8px 12px 8px 0;
+        border-right: 2px $color-main solid;
+        border-bottom: 1px $color-main solid;
+        color: $color-main;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    &__detail {
+        flex: 1;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+// ==========about==========
+
+.concept {
+    margin: 100px 0;
+    text-align: center;
+
+    &__inner {
+        @include mix-inner();
+        max-width: 754px;
+    }
+
+    &__title {
+        // display: inline-block;
+        margin: 0 auto 60px;
+        padding-bottom: 15px;
+        width: fit-content;
+        border-bottom: $color-main 4px solid;
+        font-size: 42px;
+        font-weight: bold;
+        line-height: (50/42);
+
+        @include m-query(desktop) {
+            font-size: 50px;
+            line-height: (60/50);
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: (36/18);
+
+        span {
+            display: inline-block;
+        }
+    }
+}
+
+.floor {
+    margin-bottom: 100px;
+
+    &__inner {
+        @include mix-inner();
+    }
+
+    &__title {
+        @include m-main-title();
+    }
+
+    &__list {
+        @include m-query(desktop) {
+            @include m-flex();
+            margin-bottom: -80px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 80px;
+
+        img {
+            object-fit: cover;
+            aspect-ratio: 380/285;
+            width: 100%;
+            // widthとheightの指定がないといけない
+        }
+
+        @include m-query(desktop) {
+            width: (380/1200)*100%;
+        }
+    }
+}
