@@ -143,7 +143,7 @@ img {
   margin-bottom: 60px;
 }
 .update__item img {
-  aspect-ratio: 560/315;
+  aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -152,7 +152,7 @@ img {
     width: 28.8888888889%;
   }
   .update__item img {
-    aspect-ratio: 260/195;
+    aspect-ratio: 4/3;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -188,7 +188,7 @@ img {
   margin-bottom: 60px;
 }
 .service__item img {
-  aspect-ratio: 560/315;
+  aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -200,7 +200,7 @@ img {
     width: 46.6666666667%;
   }
   .service__item img {
-    aspect-ratio: 420/315;
+    aspect-ratio: 4/3;
     -o-object-fit: cover;
        object-fit: cover;
   }
