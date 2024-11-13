@@ -1,0 +1,79 @@
+body {
+  background-color: #F4F4F4;
+  font-size: 1rem;
+  color: #244D4D;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.6875;
+  letter-spacing: 0;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 2.5em 0;
+  z-index: 999;
+  background-color: #F4F4F4;
+}
+.header__inner {
+  width: 86.4864864865%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-size: 1.625rem;
+  font-weight: bold;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__item {
+  margin-left: 1.875em;
+}
+.nav__item--active {
+  text-decoration: underline;
+}
+
+.mainVisual {
+  margin-bottom: 80px;
+  padding: 15.625em 0 8.75em;
+  background: url(../images/bg_hero.png) no-repeat center bottom/cover;
+}
+.mainVisual__inner {
+  width: 86.4864864865%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainVisual__text {
+  max-width: 10em;
+  padding: 1.3541666667em 1.25em;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2083333333;
+}
+
+.about__inner {
+  width: 86.4864864865%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about__title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2083333333;
+  margin-bottom: 60px;
+  padding-bottom: 0.625em;
+  border-bottom: #244D4D solid 2px;
+}
+/*# sourceMappingURL=style.css.map */
