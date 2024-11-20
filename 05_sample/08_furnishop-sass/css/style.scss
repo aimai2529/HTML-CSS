@@ -39,6 +39,13 @@ padding-bottom: (30em/48);
 border-bottom: $color-main solid 2px;
 }
 
+@mixin m-stitle() {
+    font-size: f-rem(24);
+    font-weight: bold;
+    line-height: (29/24);
+    margin-bottom: (25em/24);
+}
+
 @function f-rem($value) {
     @return($value/16)+rem;
 }
@@ -198,6 +205,12 @@ img {
             width: (300/1000)*100%;
         }
     }
+
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: (60em/16);
+    }
 }
 
 .card {
@@ -226,5 +239,69 @@ img {
 
     &__image {
         margin-top: auto;
+    }
+}
+
+.btn {
+    display: block;
+    width: (165em/16);
+    padding: (18em/16);
+    background-color: $color-main;
+    border-radius: (10em/16);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer {
+    padding: (120em/16) 0;
+    background-color: $color-main;
+    color: #fff;
+
+    &__inner {
+        @include m-inner();
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include m-query(desktop) {
+            @include m-flex(center);
+            flex-direction: row;
+        }
+    }
+
+    &__shopName {
+        @include m-stitle();
+    }
+
+    &__copy {
+        margin-top: (20em/12);
+        font-size: f-rem(12);
+    }
+
+    &__navigations {
+        @include m-flex(flex-start);
+
+        @include m-query(desktop) {
+            width: (360/1000)*100%;
+        }
+    }
+
+    &__nav {
+        width: (300/640)*100%;
+        margin-bottom: (60em/16);
+
+        @include m-query(desktop) {
+            width: (150/360)*100%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__navTitle {
+        @include m-stitle();
+    }
+
+    &__navItem {
+        margin-bottom: (15em/16);
+        line-height: 1;
     }
 }

@@ -165,6 +165,11 @@ img {
     width: 30%;
   }
 }
+.products .btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.75em;
+}
 
 .card {
   display: flex;
@@ -191,5 +196,80 @@ img {
 }
 .card__image {
   margin-top: auto;
+}
+
+.btn {
+  display: block;
+  width: 10.3125em;
+  padding: 1.125em;
+  background-color: #244D4D;
+  border-radius: 0.625em;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer {
+  padding: 7.5em 0;
+  background-color: #244D4D;
+  color: #fff;
+}
+.footer__inner {
+  width: 86.4864864865%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 740px) {
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.footer__shopName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2083333333;
+  margin-bottom: 1.0416666667em;
+}
+.footer__copy {
+  margin-top: 1.6666666667em;
+  font-size: 0.75rem;
+}
+.footer__navigations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (min-width: 740px) {
+  .footer__navigations {
+    width: 36%;
+  }
+}
+.footer__nav {
+  width: 46.875%;
+  margin-bottom: 3.75em;
+}
+@media screen and (min-width: 740px) {
+  .footer__nav {
+    width: 41.6666666667%;
+    margin-bottom: 0;
+  }
+}
+.footer__navTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2083333333;
+  margin-bottom: 1.0416666667em;
+}
+.footer__navItem {
+  margin-bottom: 0.9375em;
+  line-height: 1;
 }
 /*# sourceMappingURL=style.css.map */
