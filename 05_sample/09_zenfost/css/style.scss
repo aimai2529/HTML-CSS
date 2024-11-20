@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+$color-text: #1B2D55;
+$color-main: #DEF6FF;
+$color-sub: #FFF5DE;
+$color-bg: #E8EDF1;
+
+@mixin m-flex($a: stretch, $j: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin m-inner() {
+    width: (640/740)*100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+$breakpoints: (
+    "menu-q": "screen and (min-width: 950px)",
+    "desktop": "screen and (min-width: 800px)",
+    "full": "screen and (min-width: 1200px)",
+    ) !default;
+
+@mixin m-query($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin m-title() {
+    margin-bottom: 80px;
+    font-size: f-rem(48
+    );
+font-weight: bold;
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+
+&::before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin: 0 auto (25em/48);
+    background-color: $color-sub;
+    border-radius: 20px;
+}
+}
+
+@mixin m-stitle() {
+    margin-bottom: (40em/36);
+    font-size: f-rem(36);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@function f-rem($value) {
+    @return ($value/16)+rem;
+}
+
+
+// ==========commom==========
+
+
+body {
+    color: $color-text;
+    font-size: f-rem(14);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: (24/14);
+    letter-spacing: (50em/1000);
+}
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: (20em/14);
+    background-color: $color-text;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+// ==========index==========
+
+.header {
+    padding: (60em/14) 0;
+
+    &__inner {
+        @include m-inner();
+        @include m-flex(center);
+    }
+
+    &__logo {
+        width: 215px;
+    }
+
+    &__menuIcon {
+        @include m-query(menu-q) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @include m-query(menu-q) {
+            @include m-flex(center);
+            flex: 1;
+        }
+    }
+
+    &__navList {
+        @include m-flex(center);
+    }
+
+    &__navItem {
+        margin-left: (30em/16);
+        font-size: f-rem(16);
+    }
+}
+
+.mainVisual {
+    background: $color-main ;
+
+    &__inner {
+        @include m-inner();
+        padding: (150em/14) 0 (560em/14);
+        background: $color-main url(../images/img_about.png) no-repeat center bottom (60em/14);
+
+        @include m-query(desktop) {
+            padding: (150em/14) 0 (170em/14);
+            background: $color-main url(../images/img_about.png) no-repeat right bottom (60em/14);
+        }
+    }
+
+    &__title {
+        margin-bottom: (80em/48);
+        font-size: f-rem(48);
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: (58/48);
+    }
+
+    &__sns {
+        @include m-flex(center, flex-start);
+        margin-top: (40em/14);
+    }
+
+    &__snsIcon {
+        display: block;
+        margin-right: (20em/14);
+    }
+}
+
+.advantages {
+    padding: (120em/14) 0;
+
+    &__inner {
+        @include m-inner();
+    }
+
+    &__title {
+        @include m-title();
+    }
+
+    &__item {
+        margin-bottom: (80em/14);
+        padding-bottom: (80em/14);
+        border-bottom: $color-text solid 1px;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    &__itemImage {
+        margin-bottom: (40em/14);
+        text-align: center;
+    }
+
+    &__itemTitle {
+        @include m-stitle();
+    }
+
+    &__itemText {
+        margin-bottom: (60em/14);
+    }
+}
