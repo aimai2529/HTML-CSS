@@ -1,0 +1,30 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+}
+
+.card__image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+nav {
+    justify-self: end;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}

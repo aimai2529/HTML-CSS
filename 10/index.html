@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+                --color-main: #396;
+                --spacing-30: 30px;
+              }
+                    @layer components {
+        .btn {
+          @apply bg-main hover:bg-[#0f0] w-[200px] p-30 rounded-[30px] transition duration-[1s] cursor-pointer;
+        }
+    }
+            </style>
+</head>
+
+<body>
+    <h1 class="text-3xl font-bold underline p-30">Hello,world!</h1>
+    <button
+        class="bg-main w-50 p-[20px] text-[#fff] rounded-full hover:bg-[#f00] transition duration-[0.3s] cursor-pointer">ボタン</button>
+</body>
+
+</html>
